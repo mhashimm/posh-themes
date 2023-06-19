@@ -29,18 +29,18 @@
             "windows": "\ue70f"
           },
           "style": "diamond",
-          "template": "{{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}<#7a7a7a> \ue0b1</>",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} <#7a7a7a> \ue0b1</>",
           "type": "os"
         },
         {
           "style": "plain",
-          "template": " <#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</> ",
+          "template": " <#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</><#7a7a7a> \ue0b1</> ",
           "type": "session"
         },
         {
           "foreground": "#ff5555",
           "style": "plain",
-          "template": "<#ffffff>[</>{{ .Path }}<#ffffff>]</>",
+          "template": "<#ffffff></>{{ .Path }}<#ffffff></>",
           "type": "path"
         },
         {
