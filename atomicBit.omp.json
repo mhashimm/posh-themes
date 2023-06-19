@@ -1,5 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+        "os": "#ACB0BE",
+        "closer": "p:os",
+        "pink": "#F5C2E7",
+        "lavender": "#B4BEFE",
+        "blue":  "#89B4FA",
+		"red": "#FF0000"
+  },
   "blocks": [
     {
       "alignment": "left",
@@ -10,35 +18,23 @@
           "type": "session"
         },
 		{
-		  "foreground": "#26c6da",          
+          "foreground": "#ffffff",
           "properties": {
-            "alpine": "\uf300",
-            "arch": "\uf303",
-            "centos": "\uf304",
-            "debian": "\uf306",
-            "elementary": "\uf309",
-            "fedora": "\uf30a",
-            "gentoo": "\uf30d",
-            "linux": "\ue712",
-            "macos": "\ue711",
-            "manjaro": "\uf312",
-            "mint": "\uf30f",
-            "opensuse": "\uf314",
-            "raspbian": "\uf315",
-            "ubuntu": "\uf31c",
-            "windows": "\ue70f"
+            "linux": "<#ffffff>\ue27f</>",
+            "macos": "<#ffffff>\ue27f</>",
+            "windows": "<#ffffff>\ue27f</>"
           },
-          "style": "diamond",
-          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} <#7a7a7a> \ue0b1</>",
+          "style": "plain",
+          "template": "<#ffffff> </>{{ if .WSL }}WSL on {{ end }}{{.Icon}}<#ffffff> <#7a7a7a> \ue0b1 </>",
           "type": "os"
         },
         {
           "style": "plain",
-          "template": " <#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</><#7a7a7a> \ue0b1</> ",
+          "template": " <p:lavender>{{ .UserName }}</><p:pink>@</><p:blue>{{ .HostName }}</><#7a7a7a> \ue0b1</> ",
           "type": "session"
         },
         {
-          "foreground": "#ff5555",
+          "foreground": "p:os",
           "style": "plain",
           "template": "<#ffffff></>{{ .Path }}<#ffffff></>",
           "type": "path"
@@ -63,25 +59,25 @@
             "yarn_icon": " <#348cba>\uf61a</>"
           },
           "style": "plain",
-          "template": "<#ffffff>(</>{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}<#ffffff>)</>",
+          "template": "<#ffffff>[</>{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}<#ffffff>]</>",
           "type": "node"
         },
         {
           "foreground": "#FFE873",
           "style": "plain",
-          "template": "<#ffffff>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<#ffffff>)</>",
+          "template": "<#ffffff>[</>{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<#ffffff>]</>",
           "type": "python"
         },
         {
           "foreground": "#ec2729",
           "style": "plain",
-          "template": "<#ffffff>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff>)</>",
+          "template": "<#ffffff>[</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
           "type": "java"
         },
         {
           "foreground": "#0d6da8",
           "style": "plain",
-          "template": "<#ffffff>(</>{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}<#ffffff>)</>",
+          "template": "<#ffffff>{</>{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}<#ffffff>}</>",
           "type": "dotnet"
         },
         {
@@ -143,18 +139,7 @@
           "style": "plain",
           "template": "<#ffffff>(</>{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<#ffffff>)</>",
           "type": "kubectl"
-        },
-        {
-          "foreground": "#ffffff",
-          "properties": {
-            "linux": "<#ffffff>\ue27f</>",
-            "macos": "<#ffffff>\ue27f</>",
-            "windows": "<#ffffff>\ue27f</>"
-          },
-          "style": "plain",
-          "template": "<#ffffff>(</>{{ if .WSL }}WSL at {{ end }}{{.Icon}}<#ffffff>)\u2500</>",
-          "type": "os"
-        },
+        },        
         {
           "foreground": "#ffffff",
           "foreground_templates": [
@@ -193,7 +178,7 @@
           "type": "text"
         },
         {
-          "foreground": "#e0f8ff",
+          "foreground": "#f0cffc",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,
