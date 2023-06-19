@@ -6,12 +6,35 @@
       "segments": [
 		{
           "style": "plain",
-          "template": "\u256d\u2500[<#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</>]\u2500",
+          "template": "\u256d\u2500\u2500",
           "type": "session"
+        },
+		{
+		  "foreground": "#26c6da",          
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "template": "{{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}<#7a7a7a> \ue0b1</>",
+          "type": "os"
         },
         {
           "style": "plain",
-          "template": "[<#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</>]",
+          "template": " <#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .HostName }}</> ",
           "type": "session"
         },
         {
