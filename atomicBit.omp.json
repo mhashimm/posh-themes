@@ -4,6 +4,7 @@
         "os": "#ACB0BE",
         "closer": "p:os",
         "pink": "#F5C2E7",
+        "green": "#54ff54",
         "lavender": "#B4BEFE",
         "blue":  "#89B4FA",
 		"red": "#FF0000"
@@ -20,12 +21,12 @@
 		{
           "foreground": "#ffffff",
           "properties": {
-            "linux": "<#ffffff>\ue27f</>",
+            "linux": "<p:green\ue27f</>",
             "macos": "<#ffffff>\ue27f</>",
             "windows": "<#ffffff>\ue27f</>"
           },
           "style": "plain",
-          "template": "<#ffffff> </>{{ if .WSL }}WSL on {{ end }}{{.Icon}}<#ffffff> <#7a7a7a> \ue0b1 </>",
+          "template": "<#ffffff> </>{{ if .WSL }}WSL on {{ end }}<p:green>{{.Icon}}<#ffffff> <#7a7a7a> \ue0b1 </>",
           "type": "os"
         },
         {
